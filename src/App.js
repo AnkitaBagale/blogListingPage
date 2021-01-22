@@ -1,4 +1,3 @@
-import logo, { ReactComponent } from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 import React from 'react';
@@ -23,13 +22,16 @@ function App() {
     let json = await response.json();
     
     setBlogsContent(json.map(blog =>
-      (<li key="item">
+      (<div className="grid-item" key="item">
         <img className="coverImg" alt="blog_cover_image" src={blog.cover_image}></img>
-        <h3 className="title">{blog.title}</h3>
-        <time>{blog.readable_publish_date}</time>
-        <p className="description">{blog.description}</p> 
-        <a className="primary-link" href={blog.url}>Read more</a>
-      </li>) ));
+        <div className="text-section">
+          <span className="secondary-link"><i class="fas fa-heart"></i>{blog.positive_reactions_count}</span>
+          <time className="secondary-link"><i class="fas fa-calendar-alt"></i> {blog.readable_publish_date}</time>
+          <h3 className="title">{blog.title}</h3>
+          <p className="description">{blog.description}</p>
+          <a className="primary-link" href={blog.url}>Read more</a>
+        </div>
+      </div>) ));
     } 
     
     catch{
@@ -42,9 +44,11 @@ function App() {
     <div id="root">
       <h1>My Blogs Page</h1>
       <p style={{fontSize:"24px"}}>Under construction...</p>
-      <ul>
+      <div className="grid-container">
         {blogsContent}
-      </ul>
+      </div>
+
+      <footer>Footer</footer>
     </div>
   );
 
