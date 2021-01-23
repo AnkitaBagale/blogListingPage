@@ -13,9 +13,9 @@ function Search() {
   var url ="https://dev.to/api/articles";
     
   useEffect(()=>{
-    async function fetchData(fetchUrl){
+    async function fetchData(){
       try{
-      let response = await fetch(url);
+      let response = await fetch(encodeURI(url));
       blogsFetched = await response.json();   
       } 
       catch{
@@ -23,8 +23,8 @@ function Search() {
       }
   
     }
-    fetchData(encodeURI(url));  
-  }, []);
+    fetchData();  
+  });
 
   
 

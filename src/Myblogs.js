@@ -10,9 +10,9 @@ function Myblogs() {
   var url ="https://dev.to/api/articles?username=ankitabagale";
   
   useEffect(()=>{
-    async function fetchData(fetchUrl){
+    async function fetchData(){
       try{
-      let response = await fetch(fetchUrl);
+      let response = await fetch(encodeURI(url));
       blogsFetched = await response.json();
       
       setBlogsContent(blogsFetched.map(blog =>
@@ -34,8 +34,8 @@ function Myblogs() {
   
     }
       
-    fetchData(encodeURI(url));
-  },[]);
+    fetchData();
+  });
 
   return (
     <div id="root">
