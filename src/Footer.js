@@ -32,8 +32,8 @@ function Footer() {
           <ul>
             <li><a className="nav-links link-animation" href="https://ankitabagale-portfolio.netlify.app/">Portfolio</a></li>
             <li><a className="nav-links link-animation" href="mailto:manali.bagale@gmail.com">Contact Us</a></li>
-            <li><a className="nav-links link-animation">Terms of Use</a></li>
-            <li><a className="nav-links link-animation">Privacy Policy</a></li>
+            <li><a className="nav-links link-animation" href="/">Terms of Use</a></li>
+            <li><a className="nav-links link-animation" href="/">Privacy Policy</a></li>
           </ul>
         </div>
       </footer>
