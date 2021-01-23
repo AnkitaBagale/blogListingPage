@@ -13,19 +13,20 @@ function Search() {
   var url ="https://dev.to/api/articles";
     
   useEffect(()=>{
+    async function fetchData(fetchUrl){
+      try{
+      let response = await fetch(url);
+      blogsFetched = await response.json();   
+      } 
+      catch{
+        blogsFetched = [];
+      }
+  
+    }
     fetchData(encodeURI(url));  
   }, []);
 
-  async function fetchData(fetchUrl){
-    try{
-    let response = await fetch(fetchUrl);
-    blogsFetched = await response.json();   
-    } 
-    catch{
-      blogsFetched = [];
-    }
-
-  }
+  
 
   return (  
       <div id="searchblogs">

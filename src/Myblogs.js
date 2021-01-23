@@ -7,36 +7,35 @@ function Myblogs() {
 
   const [blogsContent, setBlogsContent] = useState(["loading"]);
 
-  var url ="https://dev.to/api/articles"
-  var usernameQuery = "?username=ankitabagale";
+  var url ="https://dev.to/api/articles?username=ankitabagale";
   
   useEffect(()=>{
-      fetchData(encodeURI(url+usernameQuery));
-  },[]);
-
-  async function fetchData(fetchUrl){
-    try{
-    let response = await fetch(fetchUrl);
-    blogsFetched = await response.json();
-    
-    setBlogsContent(blogsFetched.map(blog =>
-      (<div className="grid-item" key={blog.id}>
-        <img className="coverImg" alt="blog_cover_image" src={blog.cover_image}></img>
-        <div className="text-section">
-          <span className="secondary-link"><i className="fas fa-heart"></i>{blog.positive_reactions_count}</span>
-          <time className="secondary-link"><i className="fas fa-calendar-alt"></i> {blog.readable_publish_date}</time>
-          <h3 className="title">{blog.title}</h3>
-          <p className="description">{blog.description}</p>
-          <a className="primary-link" href={blog.url}>Read more</a>
-        </div>
-      </div>) ));
-    } 
-    
-    catch{
-      setBlogsContent((<p>Oops! we failed to fetch the content. Please try again by refreshing the page.</p>));
+    async function fetchData(fetchUrl){
+      try{
+      let response = await fetch(fetchUrl);
+      blogsFetched = await response.json();
+      
+      setBlogsContent(blogsFetched.map(blog =>
+        (<div className="grid-item" key={blog.id}>
+          <img className="coverImg" alt="blog_cover_image" src={blog.cover_image}></img>
+          <div className="text-section">
+            <span className="secondary-link"><i className="fas fa-heart"></i>{blog.positive_reactions_count}</span>
+            <time className="secondary-link"><i className="fas fa-calendar-alt"></i> {blog.readable_publish_date}</time>
+            <h3 className="title">{blog.title}</h3>
+            <p className="description">{blog.description}</p>
+            <a className="primary-link" href={blog.url}>Read more</a>
+          </div>
+        </div>) ));
+      } 
+      
+      catch{
+        setBlogsContent((<p>Oops! we failed to fetch the content. Please try again by refreshing the page.</p>));
+      }
+  
     }
-
-  }
+      
+    fetchData(encodeURI(url));
+  },[]);
 
   return (
     <div id="root">
