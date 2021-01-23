@@ -51,12 +51,12 @@ function Search() {
                 </div>) ));
           }
           else{
-              setBlogsContent("Oops! We did not found matching blogs. Please try any other tag.");
+              setBlogsContent(<p style={{gridColumn: "1 / 3"}}>Oops! We did not found matching blogs. Please try any other tag.</p>);
           }
         }}>
           <input onChange={(e)=>{
               enteredTag= e.target.value;
-          }} type="text" required/>
+          }} type="text" placeholder="Search..." required/>
           <button>Search</button>
           <div className="grid-container">
           {blogsContent}

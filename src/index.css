@@ -17,7 +17,6 @@
 }
 
 body{
-background-color: var(--bg-color);
 color: var(--primary-fontColor);
 }
 
@@ -53,11 +52,12 @@ a.primary-link:hover{
 /* grid-of-blogs */
 .grid-container{
   width: 100%;
-  max-width: 700px;
+  max-width: 750px;
   display: grid;
   grid-template-columns: auto auto;
   gap: 1.5rem;
-  justify-content: center;
+  justify-items: center;
+  padding: 2rem 1rem;
   margin: auto;
 }
 .grid-item{
@@ -162,6 +162,7 @@ ul{
 footer{
   padding: 2rem 2rem 4rem;
   background-color: white;
+  box-shadow: 0px 0px 5px var(--secondary-color);
 }
 
 #footer .footer-links{
@@ -195,3 +196,58 @@ a{
   font-weight: normal;
 }
 
+/* search section */
+#searchblogs{
+  text-align: center;
+}
+input{
+  display: inline-block;
+  height: 40px;
+  background-color: #F0F2F4;
+  border-left: 2px solid #F0F2F4;
+  border-top: 2px solid #F0F2F4;
+  border-bottom: 2px solid #F0F2F4;
+  font-weight: bold;
+  border-right: none;
+  padding: 0.5rem 1.5rem;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  outline: none;
+}
+input:focus{
+  border-left: 2px solid var(--primary-color);
+  border-top: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+button{
+  display: inline-block;
+  height: 40px;
+  background-image: linear-gradient(to right, var(--primary-color-faint), var(--primary-color));
+  border: none;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 767px){
+  .footer-bottom{
+    display: block;
+  }
+  footer{
+    text-align: center;
+  }
+  .footer-bottom ul{
+    justify-content: center;
+  }
+  .nav-links{
+    padding: 1rem 1.5rem 0 0;
+    display: inline-block;
+  }
+  .grid-container{
+    grid-template-columns: auto;
+  }
+}
