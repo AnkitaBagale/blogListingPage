@@ -35,7 +35,7 @@ function Myblogs() {
     }
       
     fetchData();
-  },[]);
+  });
 
   return (
       <div id="myblogs">
