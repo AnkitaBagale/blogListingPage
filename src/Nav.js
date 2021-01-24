@@ -1,4 +1,3 @@
-import {React, useState} from 'react';
 import logo from "./logoBgWhite.png";
 import { Link } from "react-router-dom";
 
