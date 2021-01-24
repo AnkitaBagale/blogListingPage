@@ -129,7 +129,9 @@ ul{
 .link-animation:hover{
   background-position: 0 100%;
 }
-
+.styleForLink{
+  text-decoration : none;
+}
 /* section headings */
 #myblogs{
   padding: 2rem 0;
@@ -152,7 +154,7 @@ ul{
 }
 .heading h2{
   font-size: 1.3rem;
-  margin-bottom: 2rem;
+  margin: 0 1.5rem 2rem 1.5rem;
   text-align: center;
 }
 /* footer section */
@@ -235,6 +237,7 @@ button{
 .about-page{
   min-height: 70vh;
   padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .about-page .heading a{
   text-decoration: underline var(--primary-fontColor);
@@ -244,10 +247,23 @@ button{
   font-size: 1.1rem;
   line-height: 1.6rem;
   text-align: justify;
+  margin: 0 1.5rem;
 }
 .about-page .heading a:hover{
   text-decoration: none;
 }
+
+/* hamburger menu */
+.line{
+  height: 3px;
+  width: 25px;
+  margin: 4px;
+  background-image: linear-gradient(to right, var(--primary-color-faint), var(--primary-color));
+}
+
+/* .burger{
+  display: none;
+} */
 
 @media screen and (max-width: 767px){
   .footer-bottom{
@@ -266,4 +282,32 @@ button{
   .grid-container{
     grid-template-columns: auto;
   }
+
+  /* hamburger menu in S,M devices */
+  /* .burger{
+    display: block;
+  }
+  .nav-menu{
+    width: 100%;
+  }
+  ul.nav-menu {
+    width: 50%;
+    flex-direction: column;
+    position: absolute;
+    top: 78px;
+    right: 0;
+    background-image:linear-gradient(to bottom, var(--CTA-color-faint), var(--primary-color-faint));
+    align-items: left;
+    justify-content: center;
+    padding-bottom: 1rem;
+
+    transform: translateX(100%);
+  }
+
+  .nav-menu .styleForLink{
+    padding: 1rem 1rem 0 1rem;
+  }
+  .nav-menu .link-animation{
+    background-image: linear-gradient(to right, var(--primary-fontColor), var(--primary-fontColor)50%, white 50%);
+  }   */
 }
