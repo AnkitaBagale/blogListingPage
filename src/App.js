@@ -28,7 +28,9 @@ function App() {
 
 const Home =()=>{
   return (
-    <Myblogs />
+    <div>
+      <Myblogs />
+    </div>
   )
 }
 
