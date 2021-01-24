@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 
 function Nav() {
 
-    var [sidebar, setSidebar] = useState("false");
-
     return (
     
       <nav>
@@ -18,7 +16,7 @@ function Nav() {
             <div className="line line1"></div>
         </div> */}
         
-        <ul className={sidebar ? "nav-menu active" : "nav-menu"}>
+        <ul className="nav-menu">
             <Link className="styleForLink" to="/myblogs">
                 <li className="nav-links link-animation">My blogs</li>
             </Link>
