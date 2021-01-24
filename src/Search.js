@@ -55,7 +55,7 @@ function Search() {
           }
         }}>
           <input onChange={(e)=>{
-              enteredTag= e.target.value;
+              enteredTag= (e.target.value).toLowerCase();
           }} type="text" placeholder="Search..." required/>
           <button>Search</button>
           <div className="grid-container">

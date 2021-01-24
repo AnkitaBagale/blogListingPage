@@ -13,7 +13,7 @@ const styleLink = {
         <div className="heading">
             <h1>About</h1>
             
-            <h2>Hi there! I'm Ankita Bagale. Creator of this small App</h2>
+            <h2>Hi there! I'm Ankita.</h2>
             
             <div className="bodyEm">Currently I am on my journey of learning web development.  I would like to document this beautiful journey. I have created some technical blogs. You can check out those blogs listed on <Link className="link-animation" style={styleLink} to="/myblogs">My blogs</Link> page. 
             <br /><br/>
