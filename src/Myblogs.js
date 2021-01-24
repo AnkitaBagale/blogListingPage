@@ -5,7 +5,7 @@ var blogsFetched =[];
 
 function Myblogs() {
 
-  const [blogsContent, setBlogsContent] = useState(["loading"]);
+  const [blogsContent, setBlogsContent] = useState(["loading..."]);
 
   var url ="https://dev.to/api/articles?username=ankitabagale";
   
@@ -35,7 +35,7 @@ function Myblogs() {
     }
       
     fetchData();
-  });
+  },[]);
 
   return (
       <div id="myblogs">

@@ -135,9 +135,6 @@ ul{
   padding: 2rem 0;
   min-height: 60vh;
 }
-#searchblogs{
-  min-height: 70vh;
-}
 .heading{
   width: 100%;
   max-width: 700px;
@@ -198,7 +195,9 @@ a{
 
 /* search section */
 #searchblogs{
+  min-height: 70vh;
   text-align: center;
+  padding-top: 2rem;
 }
 input{
   display: inline-block;
@@ -232,6 +231,23 @@ button{
   font-weight: bold;
 }
 
+/* About page */
+.about-page{
+  min-height: 70vh;
+  padding-top: 2rem;
+}
+.about-page .heading a{
+  text-decoration: underline var(--primary-fontColor);
+  text-underline-position: under;
+}
+.bodyEm{
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  text-align: justify;
+}
+.about-page .heading a:hover{
+  text-decoration: none;
+}
 
 @media screen and (max-width: 767px){
   .footer-bottom{

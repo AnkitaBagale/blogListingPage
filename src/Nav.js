@@ -21,7 +21,9 @@ function Nav() {
             <Link style={styleLink} to="/search">
                 <li className="nav-links link-animation">Search blogs</li>
             </Link>
-          <li><a className="nav-links link-animation" href="#footer">Contact us</a></li>
+            <Link style={styleLink} to="/about">
+                <li className="nav-links link-animation">About</li>
+            </Link>
         </ul>
       </nav>
     
