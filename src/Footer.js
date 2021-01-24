@@ -3,7 +3,7 @@ import logo from "./logoBgWhite.png";
 
 function Footer() {
     return (
-    <div>
+   
       <footer id="footer">
         <img className="logo" src={logo} alt="brandLogo"/>
         <div className="divider-line"></div>
@@ -37,7 +37,7 @@ function Footer() {
           </ul>
         </div>
       </footer>
-    </div>
+    
   );
 
 }

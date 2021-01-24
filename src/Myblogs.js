@@ -38,7 +38,6 @@ function Myblogs() {
   });
 
   return (
-    <div id="root">
       <div id="myblogs">
         <div className="heading">
           <h1>My Blogs</h1>
@@ -48,7 +47,6 @@ function Myblogs() {
           {blogsContent}
         </div>
       </div>
-    </div>
   );
 
 }

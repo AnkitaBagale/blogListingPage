@@ -10,14 +10,16 @@ function App() {
 
   return (
     <Router>
-      <div id="root">
-      <Nav />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/myblogs" component={Myblogs} />
-        <Route path="/search" component={Search} />
-      </Switch>
-      <Footer />
+      <div className="App">
+        <Nav />
+        
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/myblogs" component={Myblogs} />
+          <Route path="/search" component={Search} />
+        </Switch>
+        
+        <Footer />
       </div>
     </Router>
   );

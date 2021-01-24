@@ -11,7 +11,7 @@ function Nav() {
 };
 
     return (
-    <div>
+    
       <nav>
         <img className="logo" src={logo} alt="brandLogo"/>
         <ul>
@@ -24,7 +24,7 @@ function Nav() {
           <li><a className="nav-links link-animation" href="#footer">Contact us</a></li>
         </ul>
       </nav>
-    </div>
+    
   );
 
 }
