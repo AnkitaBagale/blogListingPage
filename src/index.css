@@ -201,6 +201,9 @@ a{
   text-align: center;
   padding-top: 2rem;
 }
+#searchblogs .grid-container .grid-item{
+  text-align: left;
+}
 input{
   display: inline-block;
   height: 40px;
