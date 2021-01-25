@@ -1,21 +1,24 @@
 import logo from "./logoBgWhite.png";
 import { Link } from "react-router-dom";
-
+import {React, useState} from 'react';
 
 function Nav() {
+
+    const [sideBar, setSideBar] = useState(false);
 
     return (
     
       <nav>
         
         <img className="logo" src={logo} alt="brandLogo"/>
-        {/* <div className="burger">
+        <div className={sideBar ? "burger cross" : "burger"}
+        onClick={()=>{ setSideBar(!sideBar) }}>
             <div className="line line1"></div>
-            <div className="line line1"></div>
-            <div className="line line1"></div>
-        </div> */}
+            <div className="line line2"></div>
+            <div className="line line3"></div>
+        </div>
         
-        <ul className="nav-menu">
+        <ul className={sideBar ? "nav-menu active" : "nav-menu"}>
             <Link className="styleForLink" to="/myblogs">
                 <li className="nav-links link-animation">My blogs</li>
             </Link>
