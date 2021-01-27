@@ -10,9 +10,10 @@ function Search() {
 
   const [blogsContent, setBlogsContent] = useState("");
   
-  var url ="https://dev.to/api/articles";
+  
     
   useEffect(()=>{
+    var url ="https://dev.to/api/articles";
     async function fetchData(){
       try{
       let response = await fetch(encodeURI(url));
@@ -24,7 +25,7 @@ function Search() {
   
     }
     fetchData();  
-  });
+  }, []);
 
   
 

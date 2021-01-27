@@ -5,17 +5,20 @@ var blogsFetched =[];
 
 function Myblogs() {
 
-  const [blogsContent, setBlogsContent] = useState(["loading..."]);
+  const [blogsContent, setBlogsContent] = useState("loading...");
 
-  var url ="https://dev.to/api/articles?username=ankitabagale";
   
+
   useEffect(()=>{
+    var url ="https://dev.to/api/articles?username=ankitabagale";
     async function fetchData(){
       try{
+      
       let response = await fetch(encodeURI(url));
       blogsFetched = await response.json();
       
-      setBlogsContent(blogsFetched.map(blog =>
+      setBlogsContent(
+        blogsFetched.map(blog =>
         (<div className="grid-item" key={blog.id}>
           <img className="coverImg" alt="blog_cover_image" src={blog.cover_image}></img>
           <div className="text-section">
@@ -25,17 +28,18 @@ function Myblogs() {
             <p className="description">{blog.description}</p>
             <a className="primary-link" href={blog.url}>Read more</a>
           </div>
-        </div>) ));
+        </div>)));
       } 
-      
+
       catch{
         setBlogsContent((<p>Oops! we failed to fetch the content. Please try again by refreshing the page.</p>));
       }
   
     }
-      
-    fetchData();
-  });
+
+    fetchData(); 
+
+  },[]);
 
   return (
       <div id="myblogs">
