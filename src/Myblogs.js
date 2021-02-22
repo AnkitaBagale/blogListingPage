@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import React from 'react';
-var blogsFetched =[];
+
+let blogsFetched =[];
 
 
 function Myblogs() {
@@ -10,7 +11,7 @@ function Myblogs() {
   
 
   useEffect(()=>{
-    var url ="https://dev.to/api/articles?username=ankitabagale";
+    const url ="https://dev.to/api/articles?username=ankitabagale";
     async function fetchData(){
       try{
       
