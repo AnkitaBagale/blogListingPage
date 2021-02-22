@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import React from 'react';
 
-var blogsFetched =[];
-var filteredBlogs = [];
-var enteredTag='';
+let blogsFetched =[];
+let filteredBlogs = [];
+let enteredTag='';
 
 
 function Search() {
@@ -13,7 +13,7 @@ function Search() {
   
     
   useEffect(()=>{
-    var url ="https://dev.to/api/articles";
+    const url ="https://dev.to/api/articles";
     async function fetchData(){
       try{
       let response = await fetch(encodeURI(url));
